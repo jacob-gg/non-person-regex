@@ -10,7 +10,7 @@ Load the `non_person_regex` object (a string) into R with:
 
 This repository also includes a CSV of "test" names. Some are non-persons and should be flagged by the pattern; others are people whose names include "trick" strings that should be skipped by the pattern ("ijk**cafe**xyz," ijk**auto**xyz," etc.). Load the test data set into R with:
 
-`read.csv('source('https://raw.githubusercontent.com/jacob-gg/non-person-regex/main/non_person_regex_test_names.csv')`
+`read.csv('https://raw.githubusercontent.com/jacob-gg/non-person-regex/main/non_person_regex_test_names.csv')`
 
 Check the pattern's performance with:
 
