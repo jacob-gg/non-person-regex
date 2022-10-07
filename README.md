@@ -18,9 +18,9 @@ Check the pattern's performance with:
 source('https://raw.githubusercontent.com/jacob-gg/non-person-regex/main/non_person_regex.R')
 non_person_regex_check <- function(print_unmatched = T) {
   test_dat <- read.csv('https://raw.githubusercontent.com/jacob-gg/non-person-regex/main/non_person_regex_test_names.csv')
-  matched <- stringi::stri_detect(test_dat$name, regex = non_person_regex)
+  matched <- grepl(x = test_dat$name, pattern = non_person_regex)
   cat('Pattern identifies', paste0(sum(matched), '/', sum(test_dat$type == 'non-person')), 'non-person names',
-  '\nPattern skips', paste0(sum(matched == F), '/', sum(test_dat$type == 'person')), "person names\n")
+      '\nPattern skips', paste0(sum(matched == F), '/', sum(test_dat$type == 'person')), "person names\n")
   if (print_unmatched) {cat('Unmatched:', paste0(test_dat$name[!matched], collapse = ', '), '\n')}
 }
 non_person_regex_check(print_unmatched = F)
