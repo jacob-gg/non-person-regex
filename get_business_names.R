@@ -6,6 +6,8 @@
 ##################################################
 
 get_business_names <- function(city = 'charlottesville', state = 'va', remove_comma_names = TRUE) {
+  stopifnot('rvest mustbe installed' = 'rvest' %in% installed.packages())
+  stopifnot('city must have a length of one' = length(city) == 1)
   stopifnot('state must be two characters' = is.character(state) & length(unlist(strsplit(x = state, split = ''))) == 2)
   
   pg <- 1
