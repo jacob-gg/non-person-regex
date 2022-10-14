@@ -35,7 +35,7 @@ There's also a function in this repository called `get_business_names()` that ta
 Load the function into R with:
 
 ```
-source('https://raw.githubusercontent.com/jacob-gg/non-person-regex/main/get_business_names.R')`
+source('https://raw.githubusercontent.com/jacob-gg/non-person-regex/main/get_business_names.R')
 # Usage:
 get_business_names(city = 'brunswick', state = 'ga')
 get_business_names(city = 'ENDICOTT', state = 'WA')
