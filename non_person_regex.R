@@ -2,7 +2,7 @@
 # Regex pattern for identifying non-person names #
 # Jacob Goldstein-Greenwood                      #
 # GitHub: jacob-gg                               #
-# Last revised: 2022-10-17                       #
+# Last revised: 2022-10-18                       #
 ##################################################
 
 non_person_regex <- paste0('(?i)',
