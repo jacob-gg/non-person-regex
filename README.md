@@ -1,6 +1,6 @@
 **A regex pattern for identifying non-person names**  
 [Jacob Goldstein-Greenwood](https://github.com/jacob-gg/)  
-Last revised: 2022-10-21
+Last revised: 2022-10-27
 
 This repository contains code to generate a regex pattern that flags non-person names based on common (English) strings that indicate that a name is likely a business, institution, organization, etc. The pattern is written for use in R, which uses double `\\` to escape metacharacters in regex patterns.
 
