@@ -1,32 +1,12 @@
 **A regex pattern for identifying non-person names**  
 [Jacob Goldstein-Greenwood](https://github.com/jacob-gg/)  
-Last revised: 2022-10-31
+Last revised: 2022-11-01
 
 This repository contains code to generate a regex pattern that flags non-person names based on common (English) strings that indicate that a name is likely a business, institution, organization, etc. The pattern is written for use in R, which uses double `\\` to escape metacharacters in regex patterns.
 
 Load the `non_person_regex` object (a string) into R with:  
 
 `source('https://raw.githubusercontent.com/jacob-gg/non-person-regex/main/non_person_regex.R')`
-
----
-
-In this repository, there's also a CSV file of "test" names. Some are non-persons and should be flagged by the pattern; others are people whose names include "trick" strings that should be skipped by the pattern ("ijk**cafe**xyz," ijk**auto**xyz," etc.). Load the test data set into R with:
-
-`read.csv('https://raw.githubusercontent.com/jacob-gg/non-person-regex/main/non_person_regex_test_names.csv')`
-
-Check the pattern's performance with:
-
-```
-source('https://raw.githubusercontent.com/jacob-gg/non-person-regex/main/non_person_regex.R')
-non_person_regex_check <- function(print_unmatched = T) {
-  test_dat <- read.csv('https://raw.githubusercontent.com/jacob-gg/non-person-regex/main/non_person_regex_test_names.csv')
-  matched <- grepl(x = test_dat$name, pattern = non_person_regex)
-  cat('Pattern identifies', paste0(sum(matched), '/', sum(test_dat$type == 'non-person')), 'non-person names',
-      '\nPattern skips', paste0(sum(matched == F), '/', sum(test_dat$type == 'person')), "person names\n")
-  if (print_unmatched) {cat('Unmatched:', paste0(test_dat$name[!matched], collapse = ', '), '\n')}
-}
-non_person_regex_check(print_unmatched = F)
-```
 
 ---
 
