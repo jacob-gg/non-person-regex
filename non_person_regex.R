@@ -2,7 +2,7 @@
 # Regex pattern for identifying non-person names #
 # Jacob Goldstein-Greenwood                      #
 # GitHub: jacob-gg                               #
-# Last revised: 2022-11-03                       #
+# Last revised: 2023-02-08                       #
 ##################################################
 
 non_person_regex <- paste0('(?i)',
@@ -14,24 +14,24 @@ non_person_regex <- paste0('(?i)',
                                     '(\\bass(oc(iat(es?|ions?))?|n)\\.?\\b)',
                                     '(\\ba(rchitect(ur(al|e)|s)?|rchiv(al|es?)|ttorneys?|(quarium|sylum)s?|viation)\\b)',
                                     '(\\bau(to(motive)?s?|diology)\\b)',
-                                    '(\\bba(il|nk(ers?|ing)?|k(er(s|y)|ing)|ptist|r(n|be(cu(e|ing)|r(s|shops?)?))|ths?)\\b)',
+                                    '(\\bba(il|nk(ers?|ing)?|k(er(s|y)|ing)|ptist|r(n|be(cu(e|ing)|r(s|shops?)))|ths?)\\b)',
                                     '(\\bb(bq|e(auty|d|er)|i(ble|stros?)|outiques?)\\b)',
                                     '(\\bbook(s(tore|hop|ellers?)?)?\\b)',
                                     '(\\bbr(aids?|o(ker|w)s?|e(akfast|wer(y|ies)))\\b)',
-                                    '(\\bbu(dgets?|ild(ings?|ers?)|reaus?|siness(es)?|tchers?|y)\\b)',
+                                    '(\\bbu(dgets?|ild(ings?|ers?)|reaus?|siness(es)?|tchers|y)\\b)',
                                     '(\\bc\\/?o\\.?\\b)',
                                     '(\\bca(binet|rpenter)(s|ry)\\b)',
                                     '(\\bca(re|rs?|fes?|noe(s|ing)?|pital|tholic|ter(ing|ers?))\\b)',
                                     '(\\bc(e(llular|meter(ies|y)|nt(er|re)s?)|i?(nemas?|ty))\\b)',
                                     '(\\bcl(ean(ers?|ing)|imbing?|inics?|oth(es|ing)|ubs?)\\b)',
-                                    '(\\bco(astal|ffee|ll(aborative|e(ctions?|ge)|ision)s?|lonial|mm(erc(e|ials?)|(issi)?ons?|uni(cations?|t(y|ies)))|mp(an(ies|y)|uters?)|s(metic|t(ume)?)s?|un(cil|ty))\\b)',
+                                    '(\\bco(astal|ffee|ll(aborative|e(ctions?|ge)|ision)s?|lonial|mm(erc(e|ials?)|(issi)?ons?|uni(cations?|t(y|ies)))|mp(an(ies|y)|uters?)|s(metic|t(ume)?)s?|un(cils|t(ies|y)))\\b)',
                                     '(\\bcon(crete|d(itioning|o(minium)?s?)|s(ignment|truction|ult(ing|ants?)?)|tract(ing|ors?))\\b)',
                                     '(\\bc(o(\\-|\\s)?op(eratives?)?|\\.?p\\.?)\\b)',
                                     '(\\bcorp(oration|\\.)?\\b)',
-                                    '(\\bc(h(a(pel|rter)s?|ild(\\-?care|ren)|urch(es)?)|o(oling|p(ies|ying)|r(ners?|rection(al|s))|ttages?|ves?|u(ntr(ies|y)|riers?|nsel(ers?|ing)))|r(e(dit|st)|ossings?|uise(line)?s?))\\b)',
+                                    '(\\bc(h(a(pel|rter)s?|ild(\\-?care|ren)|urches)|o(oling|p(ies|ying)|r(ners?|rection(al|s))|ttages?|ves?|u(ntr(ies|y)|riers?|nsel(ers?|ing)))|r(e(dit|st)|ossings?|uise(line)?s?))\\b)',
                                     '(\\bcu(t(s|z)?|sto(dia(l|n)|m)s?|isine)\\b)',
                                     '(\\bda(ta|y(\\s{1}|\\-)?care)\\b)',
-                                    '(\\bd(\\/\\.)?b(\\/\\.)?a\\.?\\b)',
+                                    '(\\bd(\\/|\\.)?b(\\/|\\.)?a\\.?\\b)',
                                     '(\\bde(bts?|corat(ing|ors?)|partments?|tail(ers?|ing))\\b)',
                                     '(\\bde(nt(al|ist(s|ry)?)|sign(ers?|ing|s)?|lis?|velop(er|ment)s?)\\b)',
                                     '(\\bd(i(a(gnostics?|lysis)|gital|ocese|s(counts?|posal|tricts?)|vision)|octors?|uplex(es)?)\\b)',
@@ -40,10 +40,10 @@ non_person_regex <- paste0('(?i)',
                                     '(\\bfa(ctor(y|ies)|mil(ies|y)|rm(ing|s)?)\\b)',
                                     '(\\bf(e(dera(l|tions?)|es?|llowships?)|i(nanc(es?|i(al|ng))|r(e(arm)?s?|ms?|st)|shing))\\b)',
                                     '(\\bf(lor(al|ists?)|loor(ing|s)?|oundations?|u(n(d(ing|s)?|erals?)|rni(shings?|ture))|reight)\\b)',
-                                    '(\\bg(a(ller(ies|y)|m(es?|ing)|rdens?)|ifts?|lobal|r(ill(s|ing)?|o(ups?|cer(ies|s|y)?|ves?))|un(s(miths?)?)?)\\b)',
+                                    '(\\bg(a(ller(ies|y)|m(es?|ing)|rdens?)|ifts?|lobal|r(ill(s|ing)?|o(ups?|cer(ies|s|y)?))|un(s(miths?)?)?)\\b)',
                                     '(\\bha(bitats?|ir(cut(s|ters?)?)?|ndym(a|e)n|rdware|tcher(ies|y))\\b)',
                                     '(\\bhea(lth(care)?|ting)\\b)',
-                                    '(\\bh(eights?|istoric(al)?|o(ldings?|me(\\-?bu(ild|y)er)?s?|spitality|tels?|us(ing|es?))|uman(ity|s)?|v\\-?ac)\\b)',
+                                    '(\\bh(eights|istoric(al)?|o(ldings?|me(\\-?bu(ild|y)er)?s?|spitality|tels?|us(ing|es))|uman(ity|s)?|v\\-?ac)\\b)',
                                     '(\\binc(\\.|orporated)?\\b)',
                                     '(\\bin(dustr(i(al|es)|y)|n|s(pecti(ng|ons?)|urance|t(allers?|itut(e|ion(s|al)?)))|ter(n(ational|et)|iors?)|vest(ing|ments?|ors?))\\b)',
                                     '(\\bi(sla(mic|nds?)|t)\\b)',
@@ -90,18 +90,19 @@ non_person_regex <- paste0('(?i)',
                                     '(\\bsy(stems?|nagogue)\\b)',
                                     '(\\bta(bernacle|nning|xis?|x(es)?)\\b)',
                                     '(\\bthe(at(er|re)|rap(eutics?|ists?|y))?\\b)',
-                                    '(\\bt(er(rac|mit)es?|inting|(i|y)res?|o(ur(ing|s)?|ys?|w(ers?|ing)|wn(e|\\-?ho(m|us)es?)?))\\b)',
+                                    '(\\bt(er(rac|mit)es?|i(nting|res?)|o(ur(ing|s)?|ys?|w(ers?|ing)|wn(e|\\-?ho(m|us)es?)?))\\b)',
                                     '(\\btr(a((d|in)ing|ils?|nsportation)|u(ck(ers?|ing)|st(ee)?s?))\\b)',
                                     '(\\bu(n(i(versity|ted)|limited)|rban|tilit(ies|y))\\b)',
                                     '(\\bv(e(hicle|nture|teran)s?|i(deo|ew|llage|neyard)s?)\\b)',
-                                    '(\\bwa(rehous(es?|ing)|shing|ter)\\b)',
-                                    '(\\bw((elln|irel)ess|i\\-?fi|ine(ry|ies)?|orld|reck(ing|ers?))\\b)',                                    '(\\by(mca|outh)\\b)',
+                                    '(\\bwa(rehous(es?|ing)|shing)\\b)',
+                                    '(\\bw((elln|irel)ess|i\\-?fi|ine(ry|ies)?|orld|reck(ing|ers?))\\b)',
+                                    '(\\by(mca|outh)\\b)',
                                     '(\\b(up|down|mid)\\-?town\\b)',
                                     '(\\d+)|(\\&)|(\\@)|(\\!)|(\\#)|(\\%)|(\\/)', # non-person characters
                                     "(\\'s\\s{1,}|\\'s$|s\\'\\s{1,}|s\\'$)", # possessives
                                     '(https?\\:\\/\\/)|(www\\.)|(\\.(biz|com|edu|gov|int|mil|net|org))', # websites
                                     '(\\b(a(s|t)|by|for|in|o(n|ut)|off?|too?)\\b)', # common prepositions
-                                    '(\\b(b(ou)?le?v(ar)?d|r(oa)?d|st(reet)?)\\b)', # common street indicators
+                                    '(\\b(b(ou)?le?v(ar)?d|r(oa)?d)\\b)', # common street indicators
                                     '(\\b((north|east|south|west)(ern)|north\\-?(east|west)|south\\-?(east|west))\\b)'), # cardinal directions
                                   collapse = '|')
 )
