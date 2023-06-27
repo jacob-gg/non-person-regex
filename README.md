@@ -4,7 +4,7 @@ Last revised: 2023-06-27
 
 This repository contains code to generate a regex pattern that flags non-person names based on common (English) strings that indicate that a name is likely a business, institution, organization, etc. The pattern is written with R, which uses double `\\` to escape metacharacters in regex patterns.
 
-The following line of R will return the pattern (which can be saved to an object or called directly in, e.g., `grepl()`):
+The following line of R will return the pattern as the `non_person_regex` object:
 
 `source('https://raw.githubusercontent.com/jacob-gg/non-person-regex/main/non_person_regex.R')`
 
