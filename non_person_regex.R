@@ -2,7 +2,7 @@
 # Regex pattern for identifying non-person names #
 # Jacob Goldstein-Greenwood                      #
 # GitHub: jacob-gg                               #
-# Last revised: 2023-02-08                       #
+# Last revised: 2023-06-27                       #
 ##################################################
 
 non_person_regex <- paste0('(?i)',
@@ -103,7 +103,7 @@ non_person_regex <- paste0('(?i)',
                                     '(https?\\:\\/\\/)|(www\\.)|(\\.(biz|com|edu|gov|int|mil|net|org))', # websites
                                     '(\\b(a(s|t)|by|for|in|o(n|ut)|off?|too?)\\b)', # common prepositions
                                     '(\\b(b(ou)?le?v(ar)?d|r(oa)?d)\\b)', # common street indicators
-                                    '(\\b((north|east|south|west)(ern)|north\\-?(east|west)|south\\-?(east|west))\\b)'), # cardinal directions
+                                    '(\\b((north|east|south|west)(ern)|north\\-?(east|west)|south\\-?(east|west))\\b)', # cardinal directions
+                                    '^\\S+$'),
                                   collapse = '|')
 )
-
