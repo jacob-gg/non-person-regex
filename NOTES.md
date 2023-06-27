@@ -32,9 +32,3 @@ Currently, the following business identifiers are flagged (all case-insensitive)
 - PC, PA, PBC (with optional periods throughout)
 
 List put together based on: https://en.wikipedia.org/wiki/List_of_legal_entity_types_by_country#United_States
-
----
-
-Potential updates
-
-- Match anything that doesn't have a space in it (i.e., single-word names, which are almost surely businesses)
